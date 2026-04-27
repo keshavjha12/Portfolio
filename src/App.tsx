@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="w-8 h-8 bg-brand-cyan rounded-lg flex items-center justify-center">
             <Database className="w-5 h-5 text-surface-dark" />
           </div>
-          <span>Arch<span className="text-brand-cyan">Data</span></span>
+          <span>Keshav<span className="text-brand-cyan">Jha</span></span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           {['Works', 'Experience', 'Insights', 'Contact'].map((item) => (
@@ -541,9 +541,9 @@ export default function Portfolio() {
            <div className="w-6 h-6 bg-brand-cyan/20 rounded flex items-center justify-center">
               <Database size={12} className="text-brand-cyan" />
            </div>
-           <span className="font-bold text-white">ArchData Portfolio</span>
+           <span className="font-bold text-white">Keshav Jha Portfolio</span>
         </div>
-        &copy; 2026 Senior Data & Business Architect. Produced with code-level precision.
+        &copy; 2026 Senior Power BI Developer & Data Architect. Empowering Fortune 20+ clients.
       </footer>
     </div>
   );
