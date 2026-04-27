@@ -198,10 +198,42 @@ const SkillsSection = () => {
 
 const DashboardShowcase = () => {
   const dashboards = [
-    { title: 'Executive Fin-Ops', src: 'https://images.unsplash.com/photo-1551288049-bbbda5366391?q=80&w=2070', tag: 'Finance' },
-    { title: 'Supply Chain Twin', src: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=2070', tag: 'Logistics' },
-    { title: 'User Behavior AI', src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015', tag: 'SaaS' },
-    { title: 'Global Sales Map', src: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070', tag: 'Retail' },
+    { 
+      title: 'Sales Performance Overview', 
+      src: 'input_file_0.png', 
+      tag: 'Retail & Sales',
+      desc: 'Enterprise-grade sales performance dashboard featuring period-over-period growth analysis and SKU-level drill-downs.'
+    },
+    { 
+      title: 'Insights at a Glance', 
+      src: 'input_file_1.png', 
+      tag: 'Executive BI',
+      desc: 'Quick-access strategic metrics with integrated commentary and conditional formatting for high-impact decision support.'
+    },
+    { 
+      title: 'Customer Detailed Summary', 
+      src: 'input_file_2.png', 
+      tag: 'FMCG Analytics',
+      desc: 'High-density report providing deep visibility into retailer and distributor performance across multiple regions.'
+    },
+    { 
+      title: 'Sales Hierarchy Analysis', 
+      src: 'input_file_3.png', 
+      tag: 'Data Modeling',
+      desc: 'Visualizing complex sales structures with interactive decomposition trees and MoM tracker integration.'
+    },
+    { 
+      title: 'Promo & Offer ROI', 
+      src: 'input_file_6.png', 
+      tag: 'F&B Strategy',
+      desc: 'Analyzing promotional investment versus brand share for major clients like Mayar Rice.'
+    },
+    { 
+      title: 'Supply Chain Twin', 
+      src: 'input_file_7.png', 
+      tag: 'Logistics',
+      desc: 'Integrated supply chain monitoring with competitor benchmarking and loyalty discount impact tracking.'
+    }
   ];
 
   const [selected, setSelected] = useState<null | typeof dashboards[0]>(null);
@@ -210,15 +242,15 @@ const DashboardShowcase = () => {
     <section className="py-24" id="insights">
       <SectionHeader 
         title="Dashboard Architecture" 
-        subtitle="Exploring the intersection of UI design and raw analytical power."
+        subtitle="Exploring the intersection of UI design and raw analytical power. Real-world solutions delivered to global clients."
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {dashboards.map((dash, i) => (
           <motion.div
             key={dash.title}
             layoutId={`dash-${dash.title}`}
             onClick={() => setSelected(dash)}
-            className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer glass border-white/5"
+            className="group relative h-72 rounded-2xl overflow-hidden cursor-pointer glass border-white/5"
           >
             <img src={dash.src} alt={dash.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             <div className="absolute inset-0 bg-linear-to-t from-surface-dark via-surface-dark/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
@@ -245,18 +277,21 @@ const DashboardShowcase = () => {
             <motion.div 
               layoutId={`dash-${selected.title}`}
               onClick={(e) => e.stopPropagation()}
-              className="bg-surface-lighter p-4 rounded-[2rem] border border-white/10 max-w-5xl w-full"
+              className="bg-surface-lighter p-4 rounded-[2rem] border border-white/10 max-w-5xl w-full overflow-hidden"
             >
-              <div className="aspect-video rounded-xl overflow-hidden mb-6">
-                <img src={selected.src} alt={selected.title} className="w-full h-full object-cover" />
+              <div className="aspect-video rounded-xl overflow-hidden mb-6 bg-slate-900 flex items-center justify-center">
+                <img src={selected.src} alt={selected.title} className="max-w-full max-h-full object-contain" />
               </div>
-              <div className="flex justify-between items-end">
-                <div>
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 px-4 pb-4">
+                <div className="flex-1">
                   <span className="text-xs font-mono text-brand-cyan uppercase">{selected.tag}</span>
                   <h3 className="text-3xl font-bold">{selected.title}</h3>
-                  <p className="text-slate-400 mt-2">Full-stack Power BI solution featuring real-time DirectQuery and advanced RLS.</p>
+                  <p className="text-slate-400 mt-2 text-lg">{selected.desc}</p>
                 </div>
-                <button className="btn-primary" onClick={() => setSelected(null)}>Close View</button>
+                <div className="flex gap-4">
+                  <button className="btn-outline whitespace-nowrap" onClick={() => setSelected(null)}>Close</button>
+                  <button className="btn-primary whitespace-nowrap">View Case Study</button>
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -390,13 +425,13 @@ const ContactForm = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          <a href="#" className="flex flex-col items-center gap-4 group">
+          <a href="mailto:keshavjhabca006@gmail.com" className="flex flex-col items-center gap-4 group">
             <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center group-hover:border-brand-cyan transition-colors">
               <Mail className="w-8 h-8 text-brand-cyan" />
             </div>
-            <span className="font-medium">contact@data-arch.com</span>
+            <span className="font-medium">keshavjhabca006@gmail.com</span>
           </a>
-          <a href="#" className="flex flex-col items-center gap-4 group">
+          <a href="https://linkedin.com/in/keshav-jha-67b525161" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-4 group">
             <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center group-hover:border-brand-cyan transition-colors text-slate-300">
               <Linkedin className="w-8 h-8 group-hover:text-brand-cyan transition-colors" />
             </div>
