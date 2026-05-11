@@ -200,37 +200,37 @@ const DashboardShowcase = () => {
   const dashboards = [
     { 
       title: 'Sales Performance Overview', 
-      src: 'src/input_file_0.png', 
+      src: 'input_file_0.png', 
       tag: 'Retail & Sales',
       desc: 'Enterprise-grade sales performance dashboard featuring period-over-period growth analysis and SKU-level drill-downs.'
     },
     { 
       title: 'Insights at a Glance', 
-      src: 'src/input_file_1.png', 
+      src: 'input_file_1.png', 
       tag: 'Executive BI',
       desc: 'Quick-access strategic metrics with integrated commentary and conditional formatting for high-impact decision support.'
     },
     { 
       title: 'Customer Detailed Summary', 
-      src: 'src/input_file_2.png', 
+      src: 'input_file_2.png', 
       tag: 'FMCG Analytics',
       desc: 'High-density report providing deep visibility into retailer and distributor performance across multiple regions.'
     },
     { 
       title: 'Sales Hierarchy Analysis', 
-      src: 'src/input_file_3.png', 
+      src: 'input_file_3.png', 
       tag: 'Data Modeling',
       desc: 'Visualizing complex sales structures with interactive decomposition trees and MoM tracker integration.'
     },
     { 
       title: 'Promo & Offer ROI', 
-      src: 'src/input_file_6.png', 
+      src: 'input_file_6.png', 
       tag: 'F&B Strategy',
       desc: 'Analyzing promotional investment versus brand share for major clients like Mayar Rice.'
     },
     { 
       title: 'Supply Chain Twin', 
-      src: 'src/input_file_7.png', 
+      src: 'input_file_7.png', 
       tag: 'Logistics',
       desc: 'Integrated supply chain monitoring with competitor benchmarking and loyalty discount impact tracking.'
     }
